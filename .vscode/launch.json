@@ -1,0 +1,25 @@
+{
+	"configurations": [
+		{
+			"name": "Start",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "clear",
+			"args": [
+				"&&",
+				"make"
+			]
+		},
+		{
+			"name": "Dev",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "clear",
+			"args": [
+				"&&",
+				"make",
+				"dev"
+			]
+		}
+	]
+}
