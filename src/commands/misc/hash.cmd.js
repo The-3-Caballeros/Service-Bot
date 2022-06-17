@@ -1,9 +1,9 @@
-const { MessageEmbed, MessageAttachment } = require("discord.js")
+const { MessageEmbed } = require("discord.js")
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { createHash } = require("crypto");
 
 module.exports = {
-	ownerOnly: false,
+	permissions: [],
 
 	data: new SlashCommandBuilder()
 		.setName("hash")
@@ -25,7 +25,7 @@ module.exports = {
 			.addFields(
 				{
 					name: "Text",
-					value: `${text}\t\t`,
+					value: `${text}`,
 					inline: true
 				},
 				{ name: "\u200b", value: "\u200b", inline: true }, // Empty gap.
@@ -36,6 +36,6 @@ module.exports = {
 				}
 			);
 
-		interaction.reply({ embeds: [outputEmbed], ephemeral: false });
+		await interaction.reply({ embeds: [outputEmbed], ephemeral: false });
 	}
 }

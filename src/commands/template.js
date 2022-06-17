@@ -1,9 +1,10 @@
 /* This file does not do anything, it is just a base for slash commands you can use for copy + paste. */
 
+const { MessageEmbed } = require("discord.js");
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 module.exports = {
-	ownerOnly: false,
+	permissions: [],
 
 	data: new SlashCommandBuilder()
 		.setName("CMD NAME")
