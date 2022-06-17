@@ -1,0 +1,28 @@
+{
+	"name": "service-bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Please use the Makefile.\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itsamedood/Service-Bot.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/itsamedood/Service-Bot/issues"
+	},
+	"homepage": "https://github.com/itsamedood/Service-Bot#readme",
+	"dependencies": {
+		"@discordjs/builders": "^0.15.0",
+		"@discordjs/rest": "^0.5.0",
+		"discord-api-types": "^0.34.0",
+		"discord.js": "^13.8.0",
+		"dotenv": "^16.0.1",
+		"prompt-sync": "^4.2.0"
+	}
+}
