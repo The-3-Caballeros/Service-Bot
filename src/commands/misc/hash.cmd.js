@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed, Interaction, Client } = require("discord.js")
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { createHash } = require("crypto");
 
@@ -15,6 +15,10 @@ module.exports = {
 				.setRequired(true)
 		),
 
+	/**
+	 * @param {Interaction} interaction 
+	 * @param {Client} client
+	 */
 	async execute(interaction, client) {
 		const text = interaction.options.getString("text")
 		const output = createHash("sha256").update(text).digest("hex")

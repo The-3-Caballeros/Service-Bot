@@ -1,4 +1,4 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { MessageActionRow, MessageButton, Interaction, Client } = require("discord.js");
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 module.exports = {
@@ -8,6 +8,10 @@ module.exports = {
 		.setName("links")
 		.setDescription("Lists all of dood's links!"),
 
+	/**
+	 * @param {Interaction} interaction 
+	 * @param {Client} client
+	 */
 	async execute(interaction, client) {
 		const buttons = new MessageActionRow()
 			.addComponents(

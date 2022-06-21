@@ -1,9 +1,14 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, Interaction, Client } = require("discord.js");
 const ServiceError = require("../utils/error");
 
 module.exports = {
 	name: "interactionCreate",
 	once: false,
+
+	/**
+	 * @param {Interaction} interaction
+	 * @param {Client} client
+	 */
 	async execute(interaction, client) {
 		if (interaction.isCommand()) {
 			const command = client.commands.get(interaction?.commandName);

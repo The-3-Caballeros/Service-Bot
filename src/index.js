@@ -1,6 +1,5 @@
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
-const keepAlive = require("./server");
 const stdio = require("./utils/stdio");
 require("dotenv").config();
 
@@ -24,5 +23,5 @@ process.on("warning", w => stdio.out.write(`/st_bold//fg_yellow/Warning: ${w}/st
 	client.handleCommands(commandCategories, `./src/commands`);
 	client.handleButtons();
 
-	return client.login(process.env["TOKEN"]) && keepAlive();
+	return client.login(process.env["TOKEN"]);
 })();
