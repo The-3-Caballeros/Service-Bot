@@ -4,7 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Please use the Makefile.\" && exit 1"
+		"dev_nodemon": "nodemon src/index.js",
+		"permament": "node ./src/startup.js ./src/index.js",
+		"permament_logs": "node ./src/startup.js ./src/index.js > bot_logs.log 2>&1",
+		"start_logs": "node src/index.js > bot_logs.log 2>&1",
+		"start": "node src/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +28,7 @@
 		"discord.js": "^13.8.0",
 		"dotenv": "^16.0.1",
 		"express": "^4.18.1",
-		"prompt-sync": "^4.2.0"
+		"prompt-sync": "^4.2.0",
+		"colors": "^1.4.0"
 	}
 }
