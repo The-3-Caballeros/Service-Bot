@@ -13,6 +13,6 @@ module.exports = {
 	 * @param {Client} client
 	 */
 	async execute(interaction, client) {
-		await interaction.reply({ content: `Pong!\n> 🏓 **Latency:** \`${Date.now() - interaction.createdTimestamp}ms\``, ephemeral: false });
+		await interaction.reply({ content: `Pong!\n> 🏓 **Latency:** \`${Date.now() - interaction.createdTimestamp}ms\``});
 	}
 }
