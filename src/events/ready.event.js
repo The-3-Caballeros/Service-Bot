@@ -1,8 +1,13 @@
 const stdio = require("../utils/stdio");
+const { Client } = require("discord.js");
 
 module.exports = {
 	name: "ready",
 	once: true,
+
+	/**
+	 * @param {Client} client 
+	 */
 	async execute(client) {
 		stdio.out.write(`/st_bold//fg_magenta/${client.user.tag} is ready!/st_reset/`);
 

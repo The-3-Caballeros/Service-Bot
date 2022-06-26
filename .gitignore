@@ -1,3 +1,4 @@
 /node_modules
 /src/commands/private
 .env
+src/*.c

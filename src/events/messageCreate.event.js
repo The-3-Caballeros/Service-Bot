@@ -2,8 +2,6 @@ const { Message, Client } = require("discord.js");
 
 const skullChannel = "986371402737266719";
 const countChannel = "908952488835678208";
-let curId;
-
 
 module.exports = {
 	name: 'messageCreate',
